@@ -1,0 +1,190 @@
+
+html{
+    min-height: 100%;
+    background: rgba(249, 246, 144, 0.61);
+}
+body{
+    margin: 0px;
+    font-family: Arial;
+    flex-direction: column;
+    font-size: 1.7rem;
+}
+td{
+    text-align: center;
+}
+#main_hat{
+
+    background: rgb(77,77,77);
+    padding: 1%;
+    overflow: hidden;
+    color: papayawhip;
+    height: 90px;
+}
+#lab_name{
+    margin: 0px;
+
+}
+.title{
+    text-align: center;
+}
+#buttons{
+    display: block;
+    height: fit-content;
+    position: relative;
+    margin: 0px;
+    background-color: #8abcda;
+    padding: 50px;
+    border: 4px double rgba(106,151,164,0.63);
+    border-radius: 5px;
+}
+#table_container{
+    position: inherit;
+    display: flex;
+    width: 90%;
+    background-color:rgba(249, 246, 144, 0);
+    flex-direction: column;
+}
+
+#table-grid-container{
+    grid-area: tableochka;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px);
+}
+
+#go{
+    height: 50px;
+    font-size: inherit;
+}
+
+img{
+    width: calc(30vmin * 1.8);
+    object-fit: contain;
+    background-color: hotpink;
+}
+.vars{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 70px;
+    margin-top: 10px;
+    border: 1px solid #574E4E;
+    overflow: auto;
+}
+
+label{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.border{
+    border: 4px double rgba(106,151,164,0.63);
+    border-radius: 5px;
+}
+#logic{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "graph tableochka result";
+}
+
+input[type='radio']{
+    width: 25px;
+    height: 25px;
+}
+
+input[type='submit']{
+    width: 100% ;
+}
+input[type='button']{
+    width: 100% ;
+}
+
+#graph-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: graph;
+    height: calc(100vh - 200px);
+}
+
+#yField{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 98%;
+}
+
+#yField input{
+    margin-left: 10px;
+    width: 100%;
+}
+.radio_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#result-box{
+    position: inherit;
+    display: flex;
+    width: 90%;
+    background-color:rgba(249, 246, 144, 0);
+    flex-direction: column;
+}
+#rez-container{
+    grid-area: result;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //height: calc(100vh - 680px);
+}
+#invalid_data{
+
+}
+.result_h{
+    display: block;
+    height: fit-content;
+    position: relative;
+    margin: 0px;
+    background-color: #8abcda;
+    border: 4px double rgba(106,151,164,0.63);
+    border-radius: 5px;
+}
+#history{
+    display: block;
+    background-color: hotpink;
+}
+@media only screen and (max-width: 1100px){
+    #logic{
+        grid-template-columns: 100%;
+        grid-template-rows: 500px 500px;
+        grid-template-areas: "graph" "tableochka" "result";
+    }
+    input[type='radio']{
+        width: 20px;
+        height: 20px;
+    }
+    body{
+        font-size: 1rem;
+    }    
+}
+@media only screen and (max-height: 800px){
+    #logic{
+        grid-template-columns: 100%;
+        grid-template-rows: 500px 500px;
+        grid-template-areas: "graph" "tableochka" "result";
+    }
+    input[type='radio']{
+        width: 20px;
+        height: 20px;
+    }
+    body{
+        font-size: 1rem;
+    }
+    img{
+        position: relative;
+        margin-top: 100px;
+
+    }
+}
